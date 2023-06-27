@@ -13,5 +13,6 @@
 
 :r ..\InitialData\InitialContractCategoryData.PostDeploy.sql
 :r ..\InitialData\InitialContractTypeData.PostDeployment.sql
+
 --:r ..\InitialData\OtherDataScript.sql
 -- Add more script file paths as needed
