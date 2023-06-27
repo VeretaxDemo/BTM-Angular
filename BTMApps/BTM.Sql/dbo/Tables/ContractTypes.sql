@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[ContractTypes]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+    [ContractCategoryId] UNIQUEIDENTIFIER NULL,
+    [Title] NVARCHAR(50) NULL,
+    [Description] NVARCHAR(MAX) NULL
+)
