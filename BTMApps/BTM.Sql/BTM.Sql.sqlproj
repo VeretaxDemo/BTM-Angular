@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>BTM.Sql</Name>
+    <Name>Btm.Sql</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{d6cb299c-a576-4fa1-ae7b-3297c333b04f}</ProjectGuid>
@@ -70,6 +70,8 @@
     <Build Include="dbo\Tables\ContractCategory.sql" />
     <Build Include="dbo\Tables\ContractTypes.sql" />
     <PostDeploy Include="dbo\PostDeploymentScripts\PostDeploy.LoadInitialData.sql" />
+    <Build Include="dbo\StoredProcedures\sp_ContractCategory_Get_All.sql" />
+    <Build Include="dbo\StoredProcedures\sp_ContractType_Get_All.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dbo\InitialData\InitialContractCategoryData.PostDeploy.sql" />
