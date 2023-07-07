@@ -7,7 +7,9 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Btm.Sql", "BTM.Sql\Btm.Sql.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Btm.Api.Library", "BTM.Library.Api\Btm.Api.Library.csproj", "{F2E6825F-1A74-4F95-A235-F055FCC4AC05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Btm.Web.Ng", "Btm.Web.Ng\Btm.Web.Ng.csproj", "{B042DDBD-0A30-4168-983E-B2AE4F5F3946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Btm.Web.Ng", "Btm.Web.Ng\Btm.Web.Ng.csproj", "{B042DDBD-0A30-4168-983E-B2AE4F5F3946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Btm.Api.Web", "Btm.Api.Web\Btm.Api.Web.csproj", "{FC15B18E-F239-4695-923B-27FC72CB0E5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{B042DDBD-0A30-4168-983E-B2AE4F5F3946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B042DDBD-0A30-4168-983E-B2AE4F5F3946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B042DDBD-0A30-4168-983E-B2AE4F5F3946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC15B18E-F239-4695-923B-27FC72CB0E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC15B18E-F239-4695-923B-27FC72CB0E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC15B18E-F239-4695-923B-27FC72CB0E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC15B18E-F239-4695-923B-27FC72CB0E5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
