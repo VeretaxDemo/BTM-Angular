@@ -1,5 +1,4 @@
 ﻿using Btm.Api.Library.Internal.DataAccess;
-using Btm.Api.Library.Models.Contracts;
 
 namespace Btm.Api.Library.DataAccess;
 

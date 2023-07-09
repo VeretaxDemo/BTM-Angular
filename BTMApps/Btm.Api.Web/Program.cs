@@ -1,7 +1,15 @@
-using Btm.Api.Web.Connections;
-using Btm.Api.Web.DataContext;
+using Btm.Api.Data.Connections;
+using Btm.Api.Data.Context;
+using Btm.Api.Data.DataAccess;
+using Btm.Api.Data.Services;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Set the environment based on the command-line arguments or the default environment
+var environment = builder.Environment.IsDevelopment() ? "Development" : "Production";
+    Console.WriteLine($"Environment is: {builder.Environment}");
 
 // Add services to the container.
 
@@ -10,11 +18,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//string appSettingsFile =
+//    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "appsettings.json");
+//if (environment == "Development")
+//{
+//    appSettingsFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), $"appsettings.{environment}.json");
+//}
 // Build the configuration
 var configuration = new ConfigurationBuilder()
     .SetBasePath(builder.Environment.ContentRootPath)
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-    .AddJsonFile("appsettings.dev.json", optional: true, reloadOnChange: true) // Optional appsettings.dev.json for development
+    .AddJsonFile($"appsettings.{environment}.json", optional: true, reloadOnChange: true) // Optional appsettings.dev.json for development
     .Build();
 
 // Bind the configuration to the DatabaseSettings class
@@ -23,14 +37,22 @@ configuration.GetSection("SqlServerDatabase").Bind(databaseSettings);
 
 // Add the database settings to the service container
 builder.Services.AddSingleton(databaseSettings);
+builder.Services.AddSingleton<IDataConnection>(new DataConnection(databaseSettings));
 
-// Create instances of DataContexts
-var readOnlyDataContext = new ReadOnlyDataContext(databaseSettings.ReadOnlyConnection);
-var adminDataContext = new AdminDataContext(databaseSettings.AdminOnlyConnection);
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(databaseSettings.ConnectionString);
+});
 
-// Register DataContexts in the service container
-builder.Services.AddSingleton<IDataContext>(readOnlyDataContext);
-builder.Services.AddSingleton<IDataContext>(adminDataContext);
+// Register services in the dependency injection container
+builder.Services.AddScoped<IContractCategoryService, ContractCategoryService>();
+//builder.Services.AddScoped<IContractCategoryDataAccess, ContractCategoryDataAccess>();
+//builder.Services.AddScoped<IContractCategoryDataAccess>(provider =>
+//{
+//    var dbContext = provider.GetRequiredService<AppDbContext>();
+//    var logger = provider.GetRequiredService<ILogger<ContractCategoryDataAccess>>();
+//    return new ContractCategoryDataAccess(dbContext, logger);
+//});
 
 var app = builder.Build();
 

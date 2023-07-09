@@ -9,11 +9,13 @@
   <ItemGroup>
     <Folder Include="Internal\DataAccess\" />
     <Folder Include="DataAccess\" />
+    <Folder Include="Models\Contracts\" />
+    <Folder Include="Models\Factions\" />
+    <Folder Include="Models\Units\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.143" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <ProjectReference Include="..\Btm.Api.Data\Btm.Api.Data.csproj" />
   </ItemGroup>
 
 </Project>

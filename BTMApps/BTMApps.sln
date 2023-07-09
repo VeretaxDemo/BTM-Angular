@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Btm.Api.Library", "BTM.Libr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Btm.Web.Ng", "Btm.Web.Ng\Btm.Web.Ng.csproj", "{B042DDBD-0A30-4168-983E-B2AE4F5F3946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Btm.Api.Web", "Btm.Api.Web\Btm.Api.Web.csproj", "{FC15B18E-F239-4695-923B-27FC72CB0E5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Btm.Api.Web", "Btm.Api.Web\Btm.Api.Web.csproj", "{FC15B18E-F239-4695-923B-27FC72CB0E5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Btm.Api.Data", "Btm.Api.Data\Btm.Api.Data.csproj", "{397EC0A4-835B-4697-9776-4171A3561A2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkConnectivityChecker", "NetworkConnectivityChecker\NetworkConnectivityChecker.csproj", "{DB0528AE-C42F-4CAF-8139-C4A231F9A949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{FC15B18E-F239-4695-923B-27FC72CB0E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC15B18E-F239-4695-923B-27FC72CB0E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC15B18E-F239-4695-923B-27FC72CB0E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397EC0A4-835B-4697-9776-4171A3561A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397EC0A4-835B-4697-9776-4171A3561A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397EC0A4-835B-4697-9776-4171A3561A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397EC0A4-835B-4697-9776-4171A3561A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB0528AE-C42F-4CAF-8139-C4A231F9A949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0528AE-C42F-4CAF-8139-C4A231F9A949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0528AE-C42F-4CAF-8139-C4A231F9A949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0528AE-C42F-4CAF-8139-C4A231F9A949}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

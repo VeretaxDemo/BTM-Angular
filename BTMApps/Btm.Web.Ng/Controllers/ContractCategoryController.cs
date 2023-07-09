@@ -1,5 +1,6 @@
-﻿using Btm.Api.Library.DataAccess;
-using Btm.Api.Library.Models.Contracts;
+﻿using Btm.Api.Data.Context;
+using Btm.Api.Data.Models.Contracts;
+using Btm.Api.Library.DataAccess;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

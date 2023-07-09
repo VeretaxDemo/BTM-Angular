@@ -14,14 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Btm.Api.Data\Btm.Api.Data.csproj" />
     <ProjectReference Include="..\BTM.Library.Api\Btm.Api.Library.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Connections\" />
-    <Folder Include="DataAccess\" />
     <Folder Include="DataContext\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
