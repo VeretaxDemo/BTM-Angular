@@ -1,8 +1,6 @@
-﻿using Btm.Api.Data.Models.Contracts;
-using Microsoft.EntityFrameworkCore;
+﻿namespace Btm.Api.Library.Data.Other.Connections;
 
-namespace Btm.Api.Data.Connections;
-
+[Obsolete("AdminOnlyDataConnection is being retired")]
 public class AdminOnlyDataConnection : IDataConnection
 {
     private readonly string _connectionString;

@@ -1,11 +1,13 @@
 ﻿using Btm.Api.Data.Models.Contracts;
 using Microsoft.EntityFrameworkCore;
 
-namespace Btm.Api.Data.Context;
+namespace Btm.Api.Library.Data.Other.Context;
 
-public class AppDbContext : DbContext
+// There appear to be two different AppDbContext in this project
+[Obsolete("AppDbContext is being retired")]
+public class AppDbContext : Microsoft.EntityFrameworkCore.DbContext
 {
-    public DbSet<ContractCategory> ContractCategories { get; set; }
+    public DbSet<ContractCategory> ContractCategory { get; set; }
     public DbSet<ContractType> ContractTypes { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

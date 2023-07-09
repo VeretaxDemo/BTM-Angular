@@ -1,4 +1,4 @@
-﻿namespace Btm.Api.Data.Connections;
+﻿namespace Btm.Api.Data.Settings;
 
 public class DatabaseSettings : IDatabaseSettings
 {

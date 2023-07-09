@@ -1,9 +1,6 @@
-﻿using Btm.Api.Data.Connections;
-using Btm.Api.Data.Models.Contracts;
-using Microsoft.EntityFrameworkCore;
+﻿namespace Btm.Api.Library.Data.Other.Connections;
 
-namespace Btm.Api.Data.Connections;
-
+[Obsolete("DataConnection is being retired")]
 public class DataConnection : IDataConnection
 {
     private readonly string _connectionString;

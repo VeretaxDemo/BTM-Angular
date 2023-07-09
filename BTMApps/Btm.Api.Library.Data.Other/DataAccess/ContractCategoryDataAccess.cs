@@ -1,15 +1,12 @@
-﻿using Btm.Api.Data.Connections;
-using Btm.Api.Data.Models.Contracts;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Data;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
+﻿using Btm.Api.Data.Models.Contracts;
+using Btm.Api.Data.Settings;
+using Btm.Api.Library.Data.Other.Connections;
+using Btm.Api.Library.Data.Other.Context;
 using Microsoft.Extensions.Logging;
-using Btm.Api.Data.Context;
 
-namespace Btm.Api.Data.DataAccess;
+namespace Btm.Api.Library.Data.Other.DataAccess;
 
+[Obsolete("ContractCategoryDataAccess is being retired")]
 public class ContractCategoryDataAccess : IContractCategoryDataAccess
 {
     private readonly AppDbContext _dbContext;
@@ -33,7 +30,7 @@ public class ContractCategoryDataAccess : IContractCategoryDataAccess
 
     public async Task<List<ContractCategory>> GetContractCategories()
     {
-        return await _dbContext.ContractCategories.ToListAsync();
+        return await _dbContext.ContractCategory.ToListAsync();
     }
 
     //public async Task<IEnumerable<ContractCategory>> GetContractCategories()

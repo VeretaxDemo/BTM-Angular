@@ -1,9 +1,10 @@
 ﻿using Btm.Api.Data.Models.Contracts;
 using Microsoft.EntityFrameworkCore;
 
-namespace Btm.Api.Data.Context;
+namespace Btm.Api.Library.Data.Other.Context;
 
-public class ReadOnlyDbContext : DbContext
+[Obsolete("ReadOnlyDbContext is being retired")]
+public class ReadOnlyDbContext : Microsoft.EntityFrameworkCore.DbContext
 {
     public ReadOnlyDbContext(DbContextOptions<ReadOnlyDbContext> options) : base(options)
     {
