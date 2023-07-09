@@ -78,6 +78,7 @@
   <ItemGroup>
     <None Include="dbo\InitialData\InitialContractCategoryData.PostDeploy.sql" />
     <None Include="PublishProfiles\BTM.Sql.initial.publish.publish.xml" />
+    <None Include="Btm.Sql-port14333.publish.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dbo\InitialData\InitialContractTypeData.PostDeployment.sql" />
